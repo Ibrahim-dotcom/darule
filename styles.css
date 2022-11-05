@@ -1,0 +1,335 @@
+html,body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: sans sans-serif;
+    height: 100%;
+}
+
+nav{
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 15px 3px 15px;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 2;
+}
+
+
+#close-menu{
+    display: none;
+}
+
+
+nav h1, #music h1{
+    align-self: center;
+    font-family: bebas-neue, sans-serif;
+}
+
+
+#sidebar{
+    padding-top: 50px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    padding-bottom: 50px;
+    height: 100vh;
+
+}
+
+a, a:hover, a:active, a:visited, a:link{
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+#sidebar h1{
+    font-family: serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.hidden-sidebar{
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible-sidebar{
+    width: 85vmin;
+    visibility: visible;
+    overflow: scroll;
+}
+
+#social-icons{
+    width: 100%;
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;*/
+}
+
+#social-icons i{
+    margin: 7px;
+}
+ul{
+    margin-top: 10vmin;
+    list-style-type: none;
+    line-height: 2.9em;
+    font-family: "montserrat";
+    font-size: 5vmin;
+    font-family: bebas-neue, sans-serif;
+    letter-spacing: 0.25em;
+
+}
+#slideshow{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-flow: column wrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: 100vh;
+
+}
+
+.carousel-item{
+    margin-top: 100px;
+    width: 100vw;
+    min-height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-color: black;
+    scroll-snap-align: center;
+    flex: none;
+    border: 2px solid blue;
+    overflow: scroll;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.carousel-item .button{
+    background-color: white;
+    color: #000;
+}
+
+
+.carousel-item .button:hover{
+    background-color: #000;
+    color: #fff;
+}
+#sidebar::--webkit-scrollbar{
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+.item1{
+    background-image: url("images/flyer.jpg");
+}
+
+.item2{
+    background-image: url("images/otilo1.png");
+}
+
+video{
+    scroll-snap-align: center;
+    flex: none;
+    width: 100vw;
+}
+
+#slideshow h1{
+    position: sta;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#right-arrow{
+    position: absolute;
+    top: 60%;
+    left: 80%;
+}
+#left-arrow{
+    position: absolute;
+    top: 60%;
+    right: 80%;
+}
+
+#news, #music{
+    margin-top: 60px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.glitch h1{
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.glitch h1:nth-child(1){
+    color: purple;
+    animation: glitch1 0.9s infinite;
+}
+#news > h1{
+    text-align: center;
+    font-family: bebas-neue, sans-serif;
+    font-weight: 800;
+    font-size: 1.8em;
+}
+
+@keyframes glitch1{
+    0% {
+        transform: none;
+        opacity: 1;
+        color: white;
+    }
+    50%{
+        transform: skew(-1deg, 0.6deg);
+        color: orange;
+        opacity: 0.75;
+    }
+    100%{
+        transform: none;
+        opacity: 1;
+        color: white;
+    }
+}
+
+#news p{
+    font: 1.2em monospace;
+    text-align: center;
+}
+
+#news img, #music img{
+    width: 85vw;
+    margin: auto;
+}
+
+
+
+.button{
+    box-sizing: border-box;
+    width: 80vw;
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    font-family: monospace;
+    font-size: 1.4em;
+    transition: all 0.5s;
+    margin: auto;
+
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.parallax-img{
+    background:/*linear-gradient(0deg, rgba(255, 47, 0, 0.4), rgb(255, 100, 0, 0.5)),*/ url(images/image1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+    width: 100vw;
+    height: 55vh;
+
+}
+
+
+.button#listen{
+    margin: 30px auto;
+    width: 120px;
+}
+
+.releases{
+    margin-top: 80px;
+    border-color: blueviolet;
+    color: blueviolet;
+    margin-bottom: 60px;
+}
+
+#parallax-two{
+    background:/*linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.5)),*/ url(images/image5.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35%;
+    height: 55vh;
+    width: 100vw;
+}
+
+#parallax3{
+    background:/*linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.5)),*/ url(images/image4.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35%;
+    height: 55vh;
+    width: 100vw;
+}
+
+h4{
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+.merch{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.merch div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    line-height: 0%;
+}
+
+footer{
+    width:100vw;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: black;
+    z-index: 1;
+}
