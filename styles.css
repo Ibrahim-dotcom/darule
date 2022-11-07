@@ -194,7 +194,6 @@ video{
 
 .glitch h1:nth-child(1){
     color: purple;
-    animation: glitch1 0.9s infinite;
 }
 #news > h1{
     text-align: center;
@@ -309,7 +308,7 @@ h4{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 80px;
 }
 
